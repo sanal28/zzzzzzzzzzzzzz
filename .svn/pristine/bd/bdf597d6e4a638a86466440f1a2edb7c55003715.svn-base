@@ -1,0 +1,64 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>New Employee</title>
+    <script src="~/scripts/fontawesome-all.js"></script>
+    <link href="~/Styles/bootstrap.css" rel="stylesheet" />
+    <link href="~/Styles/ETLstyles.css" rel="stylesheet" />
+    <link href="~/Styles/CustomStyles.css" rel="stylesheet" />
+    <script src="~/scripts/fontawesomevv5.0.7.js"></script>
+    <script src="~/scripts/CustomScripts.js"></script>
+    <link href="~/Styles/fontsawesome.css" rel="stylesheet" />
+    <style>
+        @@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900');
+    </style>
+    <script src="~/scripts/jquery-1.10.2.js"></script>
+</head>
+<body>
+    <header>
+        <div class="headerdiv">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="headerlogo"><img src="~/images/etl-logo.png" width="175" height="50" alt="" /></div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="myaccounthover"><a href="#"><i class="fas fa-bars"></i></a></div>
+                        <div class="userimgdiv"><img src="~/Images/download.jpg" alt="User image" /></div>
+                        <div class="menumaindiv">
+                            <ul>
+
+                                <li>Run</li>
+                                <li class="currentitem">
+                                    Info <i class="fa fa-angle-down"></i>
+                                    <ul>
+                                        <li>Employee</li>
+                                        <li>Email Alert</li>
+                                        <li>Packages</li>
+                                        <li>Connection</li>
+                                        <li>Task Schedule</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Report <i class="fa fa-angle-down"></i>
+                                    <ul>
+                                        <li>Aggregate Report</li>
+                                        <li>Log Report</li>
+                                        <li>Error Report</li>
+
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="body-content">
+        @RenderBody()
+    </div>
+</body>
+</html>

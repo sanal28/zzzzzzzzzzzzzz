@@ -1,0 +1,134 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>New Employee</title>
+    <script src="~/scripts/fontawesome-all.js"></script>
+    <link href="~/Styles/bootstrap.css" rel="stylesheet" />
+    <link href="~/Styles/ETLstyles.css" rel="stylesheet" />
+    <link href="~/Styles/CustomStyles.css" rel="stylesheet" />
+    <script src="~/scripts/fontawesomevv5.0.7.js"></script>
+    <script src="~/scripts/CustomScripts.js"></script>
+    <link href="~/Styles/fontsawesome.css" rel="stylesheet" />
+    <style>
+        @@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900');
+    </style>
+    <script src="~/scripts/jquery-1.10.2.js"></script>
+</head>
+<body>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.9/angular.min.js"></script>
+    <script type="text/javascript">
+        var app = angular.module('MyApp', [])
+        app.controller('MyController', function ($scope) {
+            //This will hide the DIV by default.
+            $scope.IsVisible = false;
+            $scope.ShowHide = function () {
+                //If DIV is visible it will be hidden and vice versa.
+                $scope.IsVisible = $scope.IsVisible ? false : true;
+            }
+        });
+    </script>
+    <!-- my account div Js ends here -->
+    <header>
+        <div class="headerdiv">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        
+                        <div class="headerlogo"><img src="~/Images/etl-logo1.png" width="175" height="50" alt="" /></div>
+                    </div>
+                    <div class="col-md-9">
+                        <div ng-app="MyApp" ng-controller="MyController">
+                            <div class="myaccounthover" value="Show Hide DIV" ng-click="ShowHide()"><a href="#"><i class="fas fa-bars"></i></a></div>
+                            <div class="usershowdiv" ng-show="IsVisible">
+                                <div id="triangle-up"></div>
+                                <div class="myaccountuserdiv">
+                                    <img src="~/Images/download.jpg" alt="" />
+                                    <div class="myaccountchangetext"><a href="#">Change</a></div>
+                                </div>
+                                <div class="myaccountrightdiv">
+                                    <h4>Snowlin Jose</h4>
+                                    <p>snowlin@nuvento.com</p>
+                                    <div class="signoutdiv"><a href="#">Signout</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="userimgdiv"><img src="~/Images/download.jpg" alt="User image" /></div>
+
+                        <div class="menumaindiv">
+                            <ul>
+
+                                <li class="currentitem">Run</li>
+                                <li>
+                                    Info <i class="fa fa-angle-down"></i>
+                                    <ul>
+                                        <li>Employee</li>
+                                        <li>Email Alert</li>
+                                        <li>Packages</li>
+                                        <li>Connection</li>
+                                        <li>Task Schedule</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Report <i class="fa fa-angle-down"></i>
+                                    <ul>
+                                        <li>Aggregate Report</li>
+                                        <li>Log Report</li>
+                                        <li>Error Report</li>
+
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    @*<header>
+        <div class="headerdiv">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="headerlogo"><img src="~/images/etl-logo.png" width="175" height="50" alt="" /></div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="myaccounthover"><a href="#"><i class="fas fa-bars"></i></a></div>
+                        <div class="userimgdiv"><img src="~/Images/download.jpg" alt="User image" /></div>
+                        <div class="menumaindiv">
+                            <ul>
+
+                                <li>Run</li>
+                                <li class="currentitem">
+                                    Info <i class="fa fa-angle-down"></i>
+                                    <ul>
+                                        <li>Employee</li>
+                                        <li>Email Alert</li>
+                                        <li>Packages</li>
+                                        <li>Connection</li>
+                                        <li>Task Schedule</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Report <i class="fa fa-angle-down"></i>
+                                    <ul>
+                                        <li>Aggregate Report</li>
+                                        <li>Log Report</li>
+                                        <li>Error Report</li>
+
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>*@
+    <div class="body-content">
+        @RenderBody()
+    </div>
+</body>
+</html>

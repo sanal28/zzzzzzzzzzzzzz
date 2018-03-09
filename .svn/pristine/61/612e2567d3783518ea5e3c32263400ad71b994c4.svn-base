@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="EmployeeCreation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ID_Employee" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="EmpName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EmpPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EmpEmail" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="EmpIsActive" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="EmpIsDelete" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="EnteredBy" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ModifiedBy" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Action" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmployeeCreationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EmployeeCreationResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="EmployeeCreationSoapIn">
+    <wsdl:part name="parameters" element="tns:EmployeeCreation" />
+  </wsdl:message>
+  <wsdl:message name="EmployeeCreationSoapOut">
+    <wsdl:part name="parameters" element="tns:EmployeeCreationResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ETLCenterEmployeeServiceSoap">
+    <wsdl:operation name="EmployeeCreation">
+      <wsdl:input message="tns:EmployeeCreationSoapIn" />
+      <wsdl:output message="tns:EmployeeCreationSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ETLCenterEmployeeServiceSoap" type="tns:ETLCenterEmployeeServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="EmployeeCreation">
+      <soap:operation soapAction="http://tempuri.org/EmployeeCreation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ETLCenterEmployeeServiceSoap12" type="tns:ETLCenterEmployeeServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="EmployeeCreation">
+      <soap12:operation soapAction="http://tempuri.org/EmployeeCreation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ETLCenterEmployeeService">
+    <wsdl:port name="ETLCenterEmployeeServiceSoap" binding="tns:ETLCenterEmployeeServiceSoap">
+      <soap:address location="http://localhost:56982/ETLCenterEmployeeService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ETLCenterEmployeeServiceSoap12" binding="tns:ETLCenterEmployeeServiceSoap12">
+      <soap12:address location="http://localhost:56982/ETLCenterEmployeeService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

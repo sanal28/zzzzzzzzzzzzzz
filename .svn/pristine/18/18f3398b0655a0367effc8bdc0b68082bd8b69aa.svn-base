@@ -1,0 +1,66 @@
+﻿
+function Validate(type)
+{
+    var returnVal = true;
+    var filter = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+    if (type == 'emp')
+    {
+        if ($("#txtNewEmployee").val() == '') {
+            $("#divNewEmployee").addClass("ErrorFocus");
+            returnVal = false;
+        }
+        else
+            $("#divNewEmployee").removeClass("ErrorFocus");
+
+        if ($("#txtPassword").val() == '') {
+            $("#divPassword").addClass("ErrorFocus");
+            returnVal = false;
+        }
+        else {
+            $("#divPassword").removeClass("ErrorFocus");
+        }
+
+        if ($("#txtReTypePassword").val() == '') {
+            $("#divReTypePassword").addClass("ErrorFocus");
+            returnVal = false;
+        }
+        else {
+            $("#divReTypePassword").removeClass("ErrorFocus");
+        }
+
+        if ($("#txtReTypePassword").val() != '') {
+
+            if ($("#txtPassword").val() != $("#txtReTypePassword").val()) {
+                $("#divPassword").addClass("ErrorFocus");
+                $("#divReTypePassword").addClass("ErrorFocus");
+                returnVal = false;
+            }
+            else {
+                $("#divPassword").removeClass("ErrorFocus");
+                $("#divReTypePassword").removeClass("ErrorFocus");
+            }
+        }
+
+
+
+        if ($("#txtEmailId").val() == '') {
+            $("#divEmailId").addClass("ErrorFocus");
+            returnVal = false;
+        }
+        else {
+            $("#divEmailId").removeClass("ErrorFocus");
+        }
+        var email = $("#txtEmailId").val();
+        var check = filter.test($("#txtEmailId").val());
+        if (!filter.test($("#txtEmailId").val())) {
+            $("#divEmailId").addClass("ErrorFocus");
+            returnVal = false;
+
+        }
+        else {
+            $("#divEmailId").removeClass("ErrorFocus");
+        }
+
+    }
+    return returnVal;
+}

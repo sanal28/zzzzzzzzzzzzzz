@@ -1,0 +1,110 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Support</title>
+    <script src="~/scripts/fontawesome-all.js"></script>
+    <link href="~/Styles/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="~/Styles/ETLstyles.css" rel="stylesheet" type="text/css" />
+    <script src="~/scripts/CustomScripts.js"></script>
+    <link href="~/Styles/CustomStyles.css" rel="stylesheet" type="text/css" />
+    <script src="~/scripts/fontawesomevv5.0.7.js"></script>
+    <link href="~/Styles/fontsawesome.css" rel="stylesheet" />
+    <style>
+        @@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900');
+    </style>
+    <script src="~/scripts/jquery-1.10.2.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#txtuserName").click(function () {
+                $("#divUserName").removeClass("ErrorFocus");
+            });
+            $("#txtEmail").click(function () {
+                $("#divEmailId").removeClass("ErrorFocus");
+            });
+            $("#txtsupportArea").click(function () {
+                $("#divTxtArea").removeClass("ErrorFocus");
+            });
+
+            $("#btnSubmit").click(function ()
+            {
+                var Name = $("#txtuserName").val();
+                var supportText = $("#txtsupportArea").val();
+                var emailid = $("#txtEmail").val(); var checkValidation = Validate("support");
+                if (checkValidation == true)
+                {
+                    $('#lblerror').text("");
+                    $('#load').html('<img src="../Images/ETLloading.gif" width="18" height="18" alt="" />');
+                    $.ajax({
+                        type: "POST", url: "/Login/EtlSupport",
+                        data: { userName: Name, emailId: emailid, message: supportText },
+                        success: function (response)
+                        {
+                            $('#load').html('');
+                            if (response.flag == true)
+                            {
+                                $('#lblerror').text("Message Send ");
+                                $("#txtuserName").val('');
+                                $("#txtsupportArea").val(''); $("#txtEmail").val('');
+                            }
+                            else if (response.flag == false)
+                            {
+                                $('#lblerror').text("Message Not Send");
+                            }
+                            else {
+                                $('#lblerror').text("Some Error occur Please try again later");
+                            }
+                        }, failure: function (response) { },
+                        error: function (response) { }
+                    });
+                }
+            });
+            
+
+            $("#btnCancel").click(function () {
+                window.location.href = '/Login/Login';
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <div class="containermaindiv">
+        <div class="supportleftdiv">
+            <div class="etllogodiv"><img src="~/Images/etl-logo.png" width="160" height="75" alt="ETL Logo" /></div>
+            <div class="etllogodesc">ETL Centre is a web based tool that helps in Package Execution, Task Management and Reporting</div>
+        </div>
+        <div class="loginrightdiv">
+            <div class="mspace"></div>
+            <div class="loginsubdiv">
+                <div class="loginheader">Send us a message</div>
+
+                <div class="username">Your Name</div>
+                <div class="usernametextdiv" id="divUserName">
+                    <input class="usernametextfield1" type="text" id="txtuserName" maxlength="50">
+                </div>
+                <div class="username">Email</div>
+                <div class="usernametextdiv" id="divEmailId">
+                    <input class="usernametextfield1" type="text" id="txtEmail" maxlength="50">
+                </div>
+                <div class="username">Type your Message</div>
+                <div class="usernametextdiv" id="divTxtArea">
+                    <textarea class="supporttextarea" id="txtsupportArea" maxlength="300"></textarea>
+                </div>
+
+                <div class="btnmaindiv">
+                    <div class="btndiv">
+                        <input type="button" class="loginbtn" value="Submit" id="btnSubmit">
+                        <input type="button" class="cancelbtn" value="Cancel"id="btnCancel">
+
+                    </div>
+                    <span id="load"></span>
+                </div>
+                <div class="loginerror "style="margin-top:-25px;" id="lblerror"></div>
+                <div class="helptext"><p><span><i class="far fa-question-circle"></i></span><a onclick="location.href='/Login/Help'" style="cursor:pointer">Help</a></p> </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

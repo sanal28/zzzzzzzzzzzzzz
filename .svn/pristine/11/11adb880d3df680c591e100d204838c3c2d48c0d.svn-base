@@ -1,0 +1,29 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AdminHome</title>
+    <script src="~/scripts/jquery-1.10.2.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#logoutbutton").click(function () {
+                window.location.href = '/Login/Logout';
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <div class="btndiv">
+            <label><b>WELCOME ADMIN</b></label><br />
+            <input type="button" class="loginbtn" value="Logout" id="logoutbutton">
+        </div>
+    </div>
+</body>
+</html>

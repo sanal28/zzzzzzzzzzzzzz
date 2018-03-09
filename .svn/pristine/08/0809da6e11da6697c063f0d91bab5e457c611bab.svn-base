@@ -1,0 +1,467 @@
+﻿@charset "UTF-8";
+/* CSS Document */
+
+body {
+    margin: 0;
+    padding: 0;
+	/*position: relative;*/
+    width: 100%;
+	background-color: #ededed !important;
+}
+
+.containermaindiv{
+	width: 800px;
+	height: 600px;
+	
+	background-color: #ededed;
+	padding: 0px;
+	margin: 0px auto;
+	
+	-webkit-box-shadow: 10px 13px 21px -12px rgba(0,0,0,0.63);
+	-moz-box-shadow: 10px 13px 21px -12px rgba(0,0,0,0.63);
+	box-shadow: 10px 13px 21px -12px rgba(0,0,0,0.63);
+}
+
+/* Login Right Section */
+.loginleftdiv {
+    width: 400px;
+    height: 600px;
+    background-image: url('../Images/login-bg.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-position: center center;
+    /*background-attachment: fixed;*/
+    float: left;
+}
+
+.etllogodiv{
+	width: 160px;
+	height: 75px;
+	margin: 100px auto 10px auto;
+	padding: 0;
+}
+
+.etllogodesc{
+	font-family: 'Lato', sans-serif;
+	font-size: .7em;
+	color: #212121;
+	padding: 5px 44px;
+	margin: auto;
+	text-align: center;
+	line-height: 18px;
+}
+
+
+/* Login Right Section */
+.loginrightdiv{
+	width: 400px;
+	height: 600px;
+	background-color: #fff;
+	float: right;
+	padding:0px;
+	
+}
+.lspace{
+	padding: 65px;
+}
+
+.loginsubdiv{
+	width: 275px;
+	margin: auto;
+	padding: 0;
+}
+
+.loginheader{
+	font-family: 'Lato', sans-serif;
+	font-size: 1.5em;
+	font-weight: normal;
+	color: #555555;
+	padding: 5px 0px 0px 0px  ;
+	margin: auto;
+	text-align: left;
+	text-transform: uppercase;
+}
+
+.username{
+	font-family: 'Lato', sans-serif;
+	font-size: 0.8em;
+	font-weight: normal;
+	color: #555555;
+	padding: 15px 0px 0px 0px ;
+	margin: auto;
+	text-align: left;
+	text-transform: capitalize;
+}
+
+.forgotpasstext{
+	font-family: 'Lato', sans-serif;
+	font-size: 0.7em;
+	font-weight: normal;
+	color: #555555;
+	padding: 15px 0px 10px 0px ;
+	margin: auto;
+	text-align: left;
+	text-transform: capitalize;
+}
+
+.usernametextdiv{
+	padding: 2px;
+	margin: 5px 0px 0px 0px;
+	background-color: #f9f9f9;
+	border: 1px solid #d1d1d1;
+}
+
+.usernametextdiv span{
+	font-family: 'Lato', sans-serif;
+	font-size: 0.9em;
+	font-weight: normal;
+	color: #555555;
+	padding: 15px 0px 0px 0px ;
+	margin: auto;
+	text-align: left;
+}
+
+.usernametextfield{
+	font-family: 'Lato', sans-serif;
+	font-size: 0.8em;
+	font-weight: normal;
+	color: #2c2c2c;
+	padding: 5px 0px 3px 5px ;
+	margin: 0;
+	width: 90%;
+	background-color: transparent;
+	border: none;
+}
+
+input:focus{
+	outline: none;
+}
+
+.btnmaindiv{
+	width: 100%;
+	overflow: auto;
+	margin-top: 15px;
+}
+
+.btnmaindiv p{
+	
+	padding: 13px 0px 0px 0px ;
+	margin: auto;
+	text-align: right;
+}
+
+.btnmaindiv p a{
+	font-family: 'Lato', sans-serif;
+	font-size: 0.7em;
+	font-weight: normal;
+	color: #555555;
+	padding: 0;
+	margin: 0;
+}
+
+.btnmaindiv p a:hover{
+	text-decoration: underline;
+	color: #000;
+	
+}
+
+.btndiv{
+	float: left;
+	padding: 10px 0px;
+}
+
+.loginbtn{
+	 background-color: #a4c46f;
+    border: none;
+    color: #fff;
+    padding: 4px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    cursor: pointer;
+	font-family: 'Lato', sans-serif;
+	border-radius: 0px;
+	text-transform: uppercase;
+	margin-top: 0px;
+}
+.cancelbtn{
+     background-color: #adadad;
+    border: none;
+    color: #fff;
+    padding: 4px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    cursor: pointer;
+    font-family: 'Lato', sans-serif;
+    border-radius: 0px;
+    text-transform: uppercase;
+    margin-top: 0px;
+}
+.helptext{
+	float: right;
+	padding: 0;
+	margin: 0;
+}
+
+.helptext p span{
+	font-family: 'Lato', sans-serif;
+	font-size: 0.8em;
+	font-weight: normal;
+	color: #555555;
+	padding: 0px 5px 0px 0px;
+}
+.helptext p a{
+	font-family: 'Lato', sans-serif;
+	font-size: 0.8em;
+	font-weight: normal;
+	color: #555555;
+	padding: 0;
+	margin: 0;
+}
+
+/* 05 mar 2018 */
+.helpcontentmaindiv {
+    width: 100%;
+    height: 200px;
+    padding: 0;
+    margin: 0px 0px 0px 0px;
+    background-image: url('../Images/pexels-photo-256467.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-position: top center;
+}
+
+
+.etllogodiv{
+	width: 160px;
+	height: 75px;
+	margin: 50px auto 10px auto;
+	padding: 0;
+}
+
+.faqheader{
+	font-family: 'Lato', sans-serif;
+	font-size: 2.3em;
+	font-weight: normal;
+	color: #655e44;
+	padding: 0;
+	margin: 40px 0px 0px 0px;
+}
+
+.helpcontentdiv{
+	background: #fff;
+	padding: 30px;
+	margin: 0px 0px 10px 0px;
+}
+
+.faqmainheader{
+	font-family: 'Lato', sans-serif;
+	font-size: 1.6em;
+	font-weight: normal;
+	color: #000;
+	padding: 0;
+	margin: 0px 0px 0px 0px;
+}
+
+.faqmainheader span{
+	font-family: 'Lato', sans-serif;
+	font-size: 1.0em;
+	font-weight: normal;
+	color: #f18c23;
+	padding: 0px;
+	margin: 0px 10px 0px 10px;
+}
+
+.faqmainheader p{
+	font-family: 'Lato', sans-serif;
+	font-size: 0.6em;
+	font-weight: normal;
+	color: #8a8a8a;
+	padding: 0px;
+	margin: 0px 0px 0px 45px;
+}
+
+
+.faquestiondiv{
+	
+	padding: 0px;
+	margin: 10px 50px 20px 50px;
+	border-bottom: 1px solid #c8c1ae;
+}
+
+.faquestiondiv h3{
+	font-family: 'Lato', sans-serif;
+	font-size: 1.2em;
+	font-weight: bold;
+	color: #7f9855;
+	padding: 0px;
+	margin: 5px 0px 0px 5px;
+
+}
+
+.faquestiondiv p{
+	font-family: 'Lato', sans-serif;
+	font-size: 0.8em;
+	font-weight: normal;
+	color: #8a8a8a;
+	padding: 5px 15px 25px 15px;
+	margin: 0px 0px 0px 0px;
+	
+}
+
+.space{
+	padding: 10px;
+}
+
+.supportdiv{
+	text-align: right;
+	padding: 5px;
+	margin: 0px;
+}
+
+.supportdiv span{
+	font-family: 'Lato', sans-serif;
+	font-size: 0.9em;
+	font-weight: bold;
+	color: #000;
+	padding: 5px;
+	margin: 0px;
+}
+
+
+.supportdiv a{
+	font-family: 'Lato', sans-serif;
+	font-size: 0.9em;
+	font-weight: bold;
+	color: #000;
+	padding: 5px;
+	margin: 0px;
+}
+.loginerror{
+	font-family: 'Lato', sans-serif;
+	font-size: 0.7em;
+	font-weight: bold;
+	color: #d00000;
+	padding: 50px 0px;
+	margin: 0px;
+	text-align: center;
+}
+.btnmaindiv span{
+	float: left;
+	width: 18px;
+	height: 18px;
+	padding: 10px 0px 0px 15px;
+	margin: 0;
+}
+/*06/03/2018*/
+.loginerror{
+	font-family: 'Lato', sans-serif;
+	font-size: 0.7em;
+	font-weight: bold;
+	color: #d00000;
+	padding: 50px 0px;
+	margin: 0px;
+	text-align: center;
+}
+
+.resetloadingdiv{
+	width: 18px;
+	height: 18px;
+	margin:20px auto;
+	padding: 0;
+}
+.supportcontentmaindiv {
+    width: 100%;
+    height: 200px;
+    padding: 0;
+    margin: 0px 0px 0px 0px;
+    background-image: url('../Images/pexels-photo-256467.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-position: top center;
+}
+
+.supportleftdiv {
+    width: 400px;
+    height: 600px;
+    background-image: url('../Images/support.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-position: center center;
+    /*background-attachment: fixed;*/
+    float: left;
+}
+
+.supportcontentdiv{
+	width: 600px;
+	
+	padding: 30px;
+	margin: 0px auto 10px auto;
+}
+
+.supporttextarea{
+	height: 100px;
+	font-family: 'Lato', sans-serif;
+	font-size: 0.8em;
+	font-weight: normal;
+	color: #2c2c2c;
+	padding: 5px 0px 3px 5px ;
+	margin: 0;
+	width: 99%;
+	background-color: transparent;
+	border: none;
+	resize: none;
+}
+
+textarea:focus { 
+    outline: none !important;
+   
+}
+
+.mspace{
+	padding: 35px;
+}
+/* 07/03/2018*/
+ 
+.usernametextfield1{
+    font-family: 'Lato', sans-serif;
+    font-size: 0.8em;
+    font-weight: normal;
+    color: #2c2c2c;
+    padding: 5px 0px 3px 5px ;
+    margin: 0;
+    width: 99%;
+    background-color: transparent;
+    border: none;
+}
+ 
+ 
+.headerdiv{
+    width: 100%;
+    height: 50px;
+    background-color: #6d60b0;
+    padding: 0;
+    margin: 0;
+}
+ 
+.headerlogo{
+    width: 175px;
+    height: 50px;
+    padding: 0;
+    margin: 0;
+}

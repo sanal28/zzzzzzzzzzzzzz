@@ -1,0 +1,155 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>New Employee</title>
+    <script src="~/scripts/fontawesome-all.js"></script>
+    <link href="~/Styles/bootstrap.css" rel="stylesheet" />
+    <link href="~/Styles/ETLstyles.css" rel="stylesheet" />
+    <link href="~/Styles/CustomStyles.css" rel="stylesheet" />
+    <script src="~/scripts/fontawesomevv5.0.7.js"></script>
+    <link href="~/Styles/fontsawesome.css" rel="stylesheet" />
+    <style>
+        @@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900');
+    </style>
+    <script src="~/scripts/jquery-1.10.2.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#txtNewEmployee").click(function () {
+                $("#divNewEmployee").removeClass("ErrorFocus");
+            });
+            $("#txtEmailId").click(function () {
+                $("#divEmailId").removeClass("ErrorFocus");
+            });
+            $("#txtPassword").click(function () {
+                $("#divPassword").removeClass("ErrorFocus");
+            });
+            $("#txtReTypePassword").click(function () {
+                $("#divReTypePassword").removeClass("ErrorFocus");
+            });
+
+            $("#btnSubmit").click(function () {
+
+                alert("hai");
+            })
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="headerdiv">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="headerlogo"><img src="~/images/etl-logo.png" width="175" height="50" alt="" /></div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="myaccounthover"><a href="#"><i class="fas fa-bars"></i></a></div>
+                        <div class="userimgdiv"><img src="~/Images/download.jpg" alt="User image" /></div>
+                        <div class="menumaindiv">
+                            <ul>
+
+                                <li>Run</li>
+                                <li class="currentitem">
+                                    Info <i class="fa fa-angle-down"></i>
+                                    <ul>
+                                        <li>Employee</li>
+                                        <li>Email Alert</li>
+                                        <li>Packages</li>
+                                        <li>Connection</li>
+                                        <li>Task Schedule</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Report <i class="fa fa-angle-down"></i>
+                                    <ul>
+                                        <li>Aggregate Report</li>
+                                        <li>Log Report</li>
+                                        <li>Error Report</li>
+
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="contentmaindiv">
+            <div class="etlheading">New Employee</div>
+            <div class="etlcontentdiv">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="etllabel">New Employee</div>
+                        <div class="inputtextdiv" id="divNewEmployee"><input class="etltextbox" type="text" id="txtNewEmployee"></div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="etllabel">Email ID</div>
+                        <div class="inputtextdiv" id="divEmailId"><input class="etltextbox" type="text" id="txtEmailId"></div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="etllabel">Password</div>
+                        <div class="inputtextdiv" id="divPassword"><input class="etltextbox" type="Password" id="txtPassword"></div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="etllabel">Re-Type Password</div>
+                        <div class="inputtextdiv" id="divReTypePassword"><input class="etltextbox" type="text" id="txtReTypePassword"></div>
+                    </div>
+                    @*<div class="col-md-4">
+                        <div class="etllabel" id="divEndDate">End Date</div>
+                        <div class="inputtextdiv"><input class="etltextbox" type="text" id="txtEndDate"></div>
+                    </div>*@
+                    <div class="col-md-4">
+                        <div class="etllabel">Is Active</div>
+                        <input type="checkbox">
+                    </div>
+                </div>
+            </div>
+            <div class="space"></div>
+            <div class="btndiv1">
+                <button title="Cancel" class="submitbtn"><i class="far fa-times-circle"></i></button>
+                <button title="Delete" class="submitbtn" ><i class="fas fa-trash-alt"></i></button>
+                <button title="Submit" class="submitbtn" id="btnSubmit"><i class="fas fa-check"></i></button>
+                <button title="Add" class="submitbtn"><i class="fas fa-plus"></i></button>
+            </div>
+            <div class="etlheading">Employee Details</div>
+            <div class="gridmaindiv">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tbody>
+                        <tr>
+                            <td width="40%" class="gridheader">Employee Name</td>
+                            <td width="40%" class="gridheader">Email ID</td>
+
+                            <td width="20%" class="gridheader">IS Active</td>
+                        </tr>
+                        <tr>
+                            <td class="gridrow1">Snowlin</td>
+                            <td class="gridrow1">0</td>
+
+                            <td class="gridrow1 gridrow1nonschedule"><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="gridrow2">Reshma</td>
+                            <td class="gridrow2">0</td>
+
+                            <td class="gridrow2 gridrow1nonschedule"><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="gridrow1">Raghu</td>
+                            <td class="gridrow1">0</td>
+
+                            <td class="gridrow1 gridrow1nonschedule"><i class="fas fa-check"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="mspace"></div>
+        </div>
+    </div>
+
+</body>
+</html>

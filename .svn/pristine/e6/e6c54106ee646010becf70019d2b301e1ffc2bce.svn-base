@@ -1,0 +1,121 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Reset password</title>
+    <script src="~/scripts/fontawesome-all.js"></script>
+    <link href="~/Styles/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="~/Styles/ETLstyles.css" rel="stylesheet" type="text/css" />
+    <link href="~/Styles/CustomStyles.css" rel="stylesheet" type="text/css" />
+    <script src="~/scripts/fontawesomevv5.0.7.js"></script>
+    <link href="~/Styles/fontsawesome.css" rel="stylesheet" />
+    <style>
+        @@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900');
+    </style>
+    <script src="~/scripts/jquery-1.10.2.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#txtNewPassword").click(function () {
+                $("#divNewPassword").removeClass("ErrorFocus");
+            });
+            $("#txtRetypePassword").click(function () {
+                $("#divReTypePassword").removeClass("ErrorFocus");
+            });
+
+            $("#btnSubmit").click(function () {
+                
+                var userId = '@ViewBag.encryptUserId';
+                var NewPassword = $("#txtNewPassword").val();
+                var ReTypePassword = $("#txtRetypePassword").val();
+
+                if ($("#txtNewPassword").val() == '') {
+                    $("#divNewPassword").addClass("ErrorFocus");
+                }
+                else
+                    $("#divNewPassword").removeClass("ErrorFocus");
+
+                if ($("#txtRetypePassword").val() == '') {
+                    $("#divReTypePassword").addClass("ErrorFocus");
+                }
+                else
+                {
+
+                    if (NewPassword != ReTypePassword)
+                    {
+                        $('#lblerror').text("PassWord Does Not Match");
+
+                        $("#divNewPassword").addClass("ErrorFocus");
+                        $("#divReTypePassword").addClass("ErrorFocus");
+                    }
+                    else {
+                        $("#divReTypePassword").removeClass("ErrorFocus");
+                        $("#divNewPassword").removeClass("ErrorFocus");
+                        $.ajax({
+                            type: "POST",
+                            url: "/Login/ResetPassword",
+                            data: { password: NewPassword, encryptId:userId},
+                            success: function (response) {
+                                if (response.flag == 1)
+                                {
+                                    $('#lblerror').html("Password changed successfully <a href='/Login/Login'>Click Here To Login</a>");
+
+                                }
+                                else
+                                {
+                                    $('#lblerror').text("Some error occurs please try again later");
+
+                                }
+
+                            },
+                            failure: function (response) {
+                            },
+                            error: function (response) {
+                            }
+                        });
+                    }
+                }
+            });
+
+            $("#btnCancel").click(function () {
+                window.location.href = '/Login/Login';
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <div class="containermaindiv">
+        <div class="loginleftdiv">
+            <div class="etllogodiv"><img src="~/Images/etl-logo.png" width="160" height="75" alt="ETL Logo" /></div>
+            <div class="etllogodesc">ETL Centre is a web based tool that helps in Package Execution, Task Management and Reporting</div>
+        </div>
+        <div class="loginrightdiv">
+            <div class="mspace"></div>
+            <div class="loginsubdiv">
+                <div class="loginheader">Reset Password</div>
+                <div class="forgotpasstext">Please choose a new password to finish signing in.</div>
+                <div class="username">New Password</div>
+                <div class="usernametextdiv" id="divNewPassword">
+                    <input class="usernametextfield" type="password" id="txtNewPassword" maxlength="50"> <span><i class="fas fa-unlock-alt"></i></span>
+                </div>
+                <div class="username">Re-Enter new Password</div>
+                <div class="usernametextdiv" id="divReTypePassword">
+                    <input class="usernametextfield" type="password" id="txtRetypePassword" maxlength="50"> <span><i class="fas fa-unlock-alt"></i></span>
+                </div>
+
+                <div class="btnmaindiv">
+                    <div class="btndiv">
+                        <input type="button" class="loginbtn" value="Change Password" id="btnSubmit">
+                        <input type="button" class="cancelbtn" value="Cancel" id="btnCancel">
+
+                    </div>
+
+                </div>
+                <div class="loginerror " id="lblerror"></div>
+                <div class="helptext"><p><span><i class="far fa-question-circle"></i></span><a href="#">Help</a></p> </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

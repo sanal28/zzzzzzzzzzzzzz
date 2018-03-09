@@ -1,0 +1,52 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Help</title>
+    <script src="~/scripts/fontawesome-all.js"></script>
+    <link href="~/Styles/bootstrap.css" rel="stylesheet" />
+    <link href="~/Styles/ETLstyles.css" rel="stylesheet" />
+    <script src="~/scripts/fontawesomevv5.0.7.js"></script>
+    <link href="~/Styles/fontsawesome.css" rel="stylesheet" />
+    <style>
+@@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900');
+    </style>
+</head>
+<body>
+    <div class="helpcontentmaindiv">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="etllogodiv"><img src="~/Images/etl-logo.png" width="160" height="75" alt="ETL Logo" /></div>
+                </div>
+                <div class="col-md-8">
+                    <div class="supportdiv"><span><i class="fas fa-headphones"></i></span><a onclick="location.href='/Login/Support'" style="cursor:pointer">Support</a></div>
+                    <div class="faqheader"><i class="far fa-comments"></i>Frequently Asked Questions</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="helpcontentdiv">
+            <div class="faqmainheader"> <span><i class="far fa-life-ring"></i></span>General Inquiries<br><p>New around here? Start with the basics.</p></div>
+            <div class="space"></div>
+            <div class="faquestiondiv">
+                <h3>What is Lorem Ipsum?</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+            </div>
+            <div class="faquestiondiv">
+                <h3>What is Lorem Ipsum?</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+            </div>
+            <div class="faquestiondiv">
+                <h3>What is Lorem Ipsum?</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+            </div>
+            <div class="faquestiondiv">
+                <h3>What is Lorem Ipsum?</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
